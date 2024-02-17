@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Git Pull') {
             steps {
-                git credentialsId: GITHUB_CREDENTIALS ,
+                git credentialsId: github-credentials,
                  url: 'https://github.com/ume950/SPE_MINI_PROJECT.git'
                 
                 
