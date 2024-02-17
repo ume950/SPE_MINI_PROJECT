@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GITHUB_CREDENTIALS = credentials("github_cred")
+        GITHUB_CREDENTIALS = credentials("github-credentials")
     }
     triggers {
         githubPush()
