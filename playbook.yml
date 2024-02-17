@@ -7,10 +7,10 @@
         state: started
 
     - name: Pull docker image
-      shell: docker pull docker.io/ajay4gidd/calcy:mini
+      shell: docker pull docker.io/umeshjaware/miniproj
 
     - name: Run container
-      shell: docker run -it -d ajay4gidd/calcy:mini
+      shell: docker run -it -d umeshjaware/miniproj
       register: run_container_output
 
     - name: Display output of docker run command
