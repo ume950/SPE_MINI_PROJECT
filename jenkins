@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Git Pull') {
             steps {
-                git credentialsId: GITHUB_CREDENTIALS,
-                 url: 'https://github.com/ajay-gidd/SPE_MINI_PROJECT.git'
+                git credentialsId: github-credentials,
+                 url: 'https://github.com/ume950/SPE_MINI_PROJECT.git'
                 
                 
             }
@@ -29,7 +29,7 @@ pipeline {
         stage('Building a Docker Image') {
             steps {
                 script {
-                    imageName = docker.build("ajay4gidd/calcy:mini")
+                    imageName = docker.build("umeshjaware/miniproj")
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
         stage('Push The Docker Image') {
             steps {
                 script {
-                   withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
+                   withDockerRegistry([ credentialsId: "DockerHubCred", url: "" ]) {
                     imageName.push()
                     }
                 }
