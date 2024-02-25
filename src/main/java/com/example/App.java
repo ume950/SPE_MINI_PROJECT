@@ -8,28 +8,33 @@ import org.apache.logging.log4j.Logger;
 public class App {
 
     private static final Logger logger = LogManager.getLogger(App.class);
-
+    
     public App() {
     }
 
     public static void main(String[] args) {
+        // Create an instance of the App class
         App app = new App();
 
         try (Scanner scanner = new Scanner(System.in)) {
             double num1, num2;
 
+            // Main menu loop
             do {
-                System.out.println("Calculator using UMESH. \n Chse:");
+                // Display the menu
+                System.out.println("Calculator using UMESH. \n Choose:");
                 System.out.print("1. Factorial\n2. Square root\n3. Power\n4. Natural Logarithm\n" +
                         "5. Exit\nEnter your choice: ");
 
                 int choice;
                 try {
+                    // Read user's choice
                     choice = scanner.nextInt();
                 } catch (InputMismatchException error) {
                     return;
                 }
 
+                // Switch based on user's choice
                 switch (choice) {
                     case 1:
                         // Factorial
@@ -66,13 +71,15 @@ public class App {
                         break;
 
                     default:
+                        // Exit
                         System.out.println("Exit");
                         return;
                 }
-            } while (true);
+            } while (true); // Continue until explicitly exited
         }
     }
 
+    // Method to calculate factorial
     public double factorial(double number1) {
         logger.info("[FACTORIAL] - " + number1);
         double result = fact(number1);
@@ -88,6 +95,7 @@ public class App {
         return facto;
     }
 
+    // Method to calculate square root
     public double squareRoot(double number1) {
         logger.info("[SQ ROOT] - " + number1);
         double result = 0;
@@ -104,6 +112,7 @@ public class App {
         return result;
     }
 
+    // Method to calculate power
     public double power(double number1, double number2) {
         logger.info("[POWER - " + number1 + " RAISED TO] " + number2);
         double result = Math.pow(number1, number2);
@@ -111,11 +120,11 @@ public class App {
         return result;
     }
 
+    // Method to calculate natural logarithm
     public double naturalLog(double number1) {
         logger.info("[NATURAL LOG] - " + number1);
         double result = 0;
         try {
-
             if (number1 < 0) {
                 result = Double.NaN;
                 throw new ArithmeticException("Case of NaN 0.0/0.0");
