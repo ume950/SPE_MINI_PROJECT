@@ -14,26 +14,26 @@ public class AppTest {
 
     @Test
     public void testFactorialWithPositiveNumbers() {
-        assertEquals("Factorial of 3", 6, calculator.fact(3), DELTA);
-        assertEquals("Factorial of 6", 720, calculator.fact(6), DELTA);
+        assertEquals("Factorial of 2", 2, calculator.fact(2), DELTA);
+        assertEquals("Factorial of 4", 24, calculator.fact(4), DELTA);
     }
 
     @Test
     public void testFactorialWithNegativeNumbers() {
-        assertNotEquals("Factorial of 7", 113, calculator.fact(7), DELTA);
-        assertNotEquals("Factorial of 8", 10, calculator.fact(8), DELTA);
+        assertNotEquals("Factorial of 5", 113, calculator.fact(5), DELTA);
+        assertNotEquals("Factorial of 6", 10, calculator.fact(6), DELTA);
     }
 
     @Test
     public void testPowerWithPositiveNumbers() {
-        assertEquals("Power of 2^4", 16, calculator.power(2, 4), DELTA);
-        assertEquals("Power of 7^2", 49, calculator.power(7, 2), DELTA);
+        assertEquals("Power of 3^2", 9, calculator.power(3, 2), DELTA);
+        assertEquals("Power of 5^2", 25, calculator.power(5, 2), DELTA);
     }
 
     @Test
     public void testPowerWithNegativeNumbers() {
-        assertNotEquals("Power of 3^3", 10, calculator.power(3, 3), DELTA);
-        assertNotEquals("Power of 4^3", -7, calculator.power(4, 3), DELTA);
+        assertNotEquals("Power of 4^3", 10, calculator.power(4, 3), DELTA);
+        assertNotEquals("Power of 2^3", -7, calculator.power(2, 3), DELTA);
     }
 
     @Test
@@ -50,8 +50,8 @@ public class AppTest {
 
     @Test
     public void testSquareRootWithPositiveNumbers() {
+        assertEquals("Square root of 64", 8, calculator.squareRoot(64), DELTA);
         assertEquals("Square root of 25", 5, calculator.squareRoot(25), DELTA);
-        assertEquals("Square root of 81", 9, calculator.squareRoot(81), DELTA);
     }
 
     @Test
