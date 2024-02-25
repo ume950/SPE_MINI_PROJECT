@@ -22,7 +22,7 @@ public class App {
             // Main menu loop
             do {
                 // Display the menu
-                System.out.println("Calculator using UMESH. \n Choose:");
+                System.out.println("Scientific Calculator \n Choose any operation:");
                 System.out.print("1. Factorial\n2. Square root\n3. Power\n4. Natural Logarithm\n" +
                         "5. Exit\nEnter your choice: ");
 
