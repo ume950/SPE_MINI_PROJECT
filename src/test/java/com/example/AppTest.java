@@ -38,7 +38,7 @@ public class AppTest {
 
     @Test
     public void testNaturalLogWithPositiveNumbers() {
-        assertEquals("Natural log of 0", 1, calculator.naturalLog(1), DELTA);
+        assertEquals("Natural log of 1", 0, calculator.naturalLog(1), DELTA);
         assertEquals("Natural log of e", 1, calculator.naturalLog(2.718281828459045), DELTA);
     }
 
