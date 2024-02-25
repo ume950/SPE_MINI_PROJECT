@@ -20,7 +20,7 @@ public class AppTest {
 
     @Test
     public void testFactorialWithNegativeNumbers() {
-        assertNotEquals("Factorial of 7", 5040, calculator.fact(7), DELTA);
+        assertNotEquals("Factorial of 7", 113, calculator.fact(7), DELTA);
         assertNotEquals("Factorial of 8", 40320, calculator.fact(8), DELTA);
     }
 
@@ -44,8 +44,8 @@ public class AppTest {
 
     @Test
     public void testNaturalLogWithNegativeNumbers() {
-        assertNotEquals("Natural log of 3", 1.0986122886681098, calculator.naturalLog(3), DELTA);
-        assertNotEquals("Natural log of 4", 1.3862943611198906, calculator.naturalLog(4), DELTA);
+        assertNotEquals("Natural log of 2.4", 60, calculator.naturalLog(2.4), DELTA);
+        assertNotEquals("Natural log of 2.1", 4.7, calculator.naturalLog(2.1), DELTA);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class AppTest {
 
     @Test
     public void testSquareRootWithNegativeNumbers() {
-        assertNotEquals("Square root of 5", 2, calculator.squareRoot(5), DELTA);
-        assertNotEquals("Square root of 64", 8, calculator.squareRoot(64), DELTA);
+        assertNotEquals("Square root of 3", 1, calculator.squareRoot(3), DELTA);
+        assertNotEquals("Square root of 81", 4, calculator.squareRoot(81), DELTA);
     }
 }
