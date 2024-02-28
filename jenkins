@@ -46,7 +46,7 @@ pipeline {
                 script {
                     docker.withRegistry('', 'DockerHubCred') {
                         sh 'docker tag ${DOCKER_IMAGE_NAME} umeshjaware/miniproj'
-                        sh 'docker push umeshjaware/miniproj' // Corrected the username
+                        sh 'docker push umeshjaware/miniproj' 
                     }
                 }
             }
